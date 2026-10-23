@@ -1,0 +1,8 @@
+{
+  "tags": ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"],
+  "targets": {
+    "broken": { "baseURL": "http://localhost:4173/broken/", "pages": [{ "name": "registration", "path": "index.html" }] },
+    "fixed":  { "baseURL": "http://localhost:4173/fixed/",  "pages": [{ "name": "registration", "path": "index.html" }] }
+  },
+  "expectedFocusOrder": { "registration": ["Skip to main content", "Menu", "name", "email", "course", "Privacy policy", "Register", "Browse the course catalog"] }
+}

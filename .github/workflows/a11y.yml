@@ -1,0 +1,18 @@
+name: Accessibility tests
+on: [push, pull_request]
+jobs:
+  a11y:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm }
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Fixed site must pass
+        run: npm run test:fixed
+      - name: Broken site must fail (proves the checks catch real issues)
+        run: "! npm run test:broken"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: a11y-reports, path: reports/ }
