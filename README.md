@@ -1,6 +1,6 @@
 # a11y-playwright-axe
 
-[![Accessibility tests](https://github.com/OWNER/a11y-playwright-axe/actions/workflows/a11y.yml/badge.svg)](../../actions)
+[![Accessibility tests](https://github.com/mongeo/a11y-playwright-axe/actions/workflows/a11y.yml/badge.svg)](../../actions)
 
 An automated accessibility test framework built on **Playwright (TypeScript)** and **@axe-core/playwright**. It scans pages against **WCAG 2.0/2.1/2.2 Level A and AA** rules and adds keyboard tests (focus order, focus visibility, skip links) that axe can't check by itself.
 
